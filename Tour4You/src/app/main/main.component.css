@@ -20,6 +20,14 @@
     filter: blur(3px); /* Apply blur effect only to this pseudo-element */
     z-index: -1; /* Moves it behind the text */
 }
+.cover-pic::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.479); /* Black with 40% transparency */
+    z-index: -1; /* Layer it above the blurred background */
+}
 
 .cover {
     width: 900px;
