@@ -1,0 +1,58 @@
+nav {
+    z-index: 2;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.705);
+    position: absolute;
+    height: 80px; /* Match the logo height */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Ensures vertical alignment */
+    font-size: 1.3em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.logo {
+    height: 80px;
+    width: 80px;
+    background-image: url(../../assets/logo.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-left: 40px;
+}
+
+.sections {
+    width: 550px;
+    display: flex;
+    align-items: center; /* Ensures vertical alignment */
+    margin-right: 100px;
+    color: rgb(4, 4, 66);
+    font-weight: 600;
+    justify-content: space-between;
+}
+
+/* Fix ul alignment */
+.sections ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+/* Container for images */
+.images-section {
+    display: flex;
+    justify-content: center; /* Center images horizontally */
+    gap: 20px; /* Space between images */
+    margin-top: 30px; /* Space between the previous section */
+}
+
+/* Style each image */
+.image-item {
+    width: 300px;  /* Set width */
+    height: 200px;  /* Set height */
+    object-fit: cover;  /* Ensure images cover the container */
+    border: 5px solid white;  /* White border around images */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+

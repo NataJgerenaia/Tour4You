@@ -1,0 +1,93 @@
+.cover-pic {
+    width: 100%;
+    height: 100%;
+    position: relative; /* Needed for absolute positioning inside */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Prevents overflow from pseudo-element */
+}
+
+.cover-pic::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../assets/clocktower.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(3px); /* Apply blur effect only to this pseudo-element */
+    z-index: -1; /* Moves it behind the text */
+}
+
+.cover {
+    width: 900px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-size: 3em;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    z-index: 1; /* Ensures text stays above blurred background */
+}
+span{
+    color: rgb(216, 18, 18);
+}
+
+h2{
+    font-size: 0.5em;
+    margin-top: 10px;
+}
+.offers-list{
+    width: 900px;
+    display: flex;
+    font-size: 0.5em;
+    margin-top: 10px;
+}
+.offers-list ul{
+    width: 500px;
+}
+.images-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.image-item {
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border: 5px solid white;
+    box-shadow: 0px 5px 10px rgb(196, 194, 194);
+}
+
+.borjomi {
+    background-image: url('../../assets/borjomi2.jpg');
+}
+
+.mtskheta {
+    background-image: url('../../assets/mtskheta.jpg');
+}
+
+.food {
+    background-image: url('../../assets/food.jpg');
+}
+
+.signagi {
+    background-image: url('../../assets/signagi.jpg');
+}
+
+.st-nino-monastery {
+    background-image: url('../../assets/st.nino monastry.jpg');
+}
+.old-town{
+    background-image: url('../../assets/tbilisi_s-old-town.jpg');
+}
