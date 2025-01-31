@@ -43,7 +43,8 @@ nav {
 
 .sections ul:hover {
     transform: scale(1.1); 
-    opacity: 0.8; 
+    /* opacity: 0.9;  */
+    color: rgb(45, 45, 100);
 }
 .navbar {
     display: flex;
@@ -74,13 +75,6 @@ nav {
   background-position: center;
 }
 
-.flag-en {
-  background-image: url('../../assets/Flag_of_the_United_Kingdom.svg.png');
-}
-
-.flag-ru {
-  background-image: url('../../assets/Flag_of_Russia.svg.png');
-}
 
 select {
   padding: 5px;
