@@ -122,3 +122,26 @@
         <div class="bakuriani-2"></div>
     </div>
 </div>
+
+
+
+<div class="booking-section">
+    <div class="booking-img"></div>
+    <button class="btn-3" (click)="openModal()">Book Now</button>
+    <div *ngIf="isModalOpen" class="modal-overlay">
+        <div class="modal-content">
+            <div class="logo"></div>
+          <button class="close-btn" (click)="closeModal()">X</button>
+          <p class="modal-text">Leave a request and receive <br> a detailed program for each trip!</p>
+          <h4>Our specialist will consult you </h4>
+         <form action="submit">
+            <input type="name" placeholder="Name">
+            <input type="tel" id="phone">
+            <button type="submit" class="submit-btn">Find out details of the trip </button>
+         </form>
+
+          <p class="policy-text">By submitting an application, you agree to <br> the personal data processing policy.</p>
+        </div>
+      </div>
+</div>
+

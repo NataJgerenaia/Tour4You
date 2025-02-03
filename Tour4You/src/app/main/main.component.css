@@ -1,6 +1,6 @@
 .cover-pic {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: relative; /* Needed for absolute positioning inside */
     display: flex;
     align-items: center;
@@ -170,8 +170,8 @@ h2{
 
 .card {
     z-index: 1; /* Ensures the card stays above the overlay */
-    width: 70%;
-    height: 55%;
+    width: 75%;
+    height: 70%;
     background-color:#cddb84;
     border-radius: 50px;
     display: flex;
@@ -214,6 +214,7 @@ button:hover{
     border: 2px solid white;
 }
 .details{
+    width: 100%;
     height: 30px;
     display: flex;
     align-items: center;
@@ -422,6 +423,9 @@ button:hover{
     background: rgba(255, 255, 255, 0.5); /* Adjust opacity here */
     border-radius: 20px;
 }
+.tbilisi-card{
+    background-color:rgb(255, 208, 80) ;
+}
 .tbilisi-card h2{
     color: rgb(85, 83, 83);
 }
@@ -455,3 +459,185 @@ button:hover{
     background-position: center;
     border-radius: 100px;
  }
+.booking-section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.booking-img{
+    width: 40%;
+    height: 400px;
+    background-image: url('../../assets/booking.png');
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+}
+.btn-3 {
+    width: 300px;
+    height: 80px;
+    font-size: 2.7em;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(45deg, #ff0000, #0000ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Makes text take the gradient */
+    font-weight: bold;
+    box-shadow: 10px 10px 10px gray;
+    transition: transform 0.5s ease, background 0.3s ease, -webkit-text-fill-color 0.3s ease;
+}
+
+.btn-3:hover {
+    background: linear-gradient(45deg, #e92309, #130468);
+    -webkit-text-fill-color: white; /* Makes text white on hover */
+    transform: scale(1.1);
+}
+
+.btn-3 {
+    width: 300px;
+    height: 80px;
+    font-size: 2.7em;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(45deg, #ff0000, #0000ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    box-shadow: 10px 10px 10px gray;
+    transition: transform 0.5s ease, background 0.3s ease, -webkit-text-fill-color 0.3s ease;
+}
+
+.btn-3:hover {
+    background: linear-gradient(45deg, #df2e17, #130468);
+    -webkit-text-fill-color: white;
+    transform: scale(1.1);
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.623); /* White with some transparency */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+/* Modal Content */
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    padding: 50px;
+    text-align: center;
+    position: relative;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    width: 30px;
+}
+
+.close-btn:hover {
+    color: rgb(18, 7, 85);
+    background-color: rgb(216, 213, 213);
+}
+
+/* Modal Text */
+.modal-text {
+    font-size: 2em;
+    color: rgb(11, 42, 109);
+    font-weight: 700;
+}
+
+
+  *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+form {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  gap: 10px; /* Adds consistent space between input elements */
+}
+
+input,
+.iti__flag-container,
+.iti__selected-flag {
+  width: 100% !important; /* Ensures both inputs take up the same width */
+}
+
+.iti {
+  width: 100% !important; /* Forces the intlTelInput container to take full width */
+}
+
+.iti__input {
+  width: 100% !important; /* Forces the input inside the intlTelInput to take full width */
+  height: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1.1em;
+}
+
+input {
+  width: 100%; /* Ensures inputs take up full width */
+  height: 50px;
+  border: 2px solid rgb(182, 179, 179);
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1.1em;
+}
+
+.modal-content h4{
+    margin-top: 10px;
+    color: rgb(228, 42, 28);
+
+}
+.submit-btn{
+    background-color: rgb(32, 68, 145);
+    color: white;
+    height: 50px;
+    width: 100%;
+    margin-top: 10px;
+}
+.submit-btn:hover{
+    background-color: rgb(87, 117, 180);
+}
+.policy-text{
+    margin-top: 20px;
+    color: rgb(139, 138, 138);
+}
+.logo{
+    width: 60px;
+    height: 60px;
+    background-image: url('../../assets/logo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
