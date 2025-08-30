@@ -1,9 +1,18 @@
 <nav>
-    <div class="logo"></div>
-    <div class="sections">
-       <ul>Tours</ul>
-       <ul>How to Book?</ul>
-       <!-- <ul>About us</ul> -->
-       <ul>Contact us</ul>
-    </div>
+  <div class="logo"></div>
+
+  <!-- Sections menu -->
+  <div class="sections" [class.active]="isMenuOpen">
+    <ul (click)="scrollTo('tours')">Tours</ul>
+    <ul (click)="scrollTo('book')">How to Book?</ul>
+    <ul (click)="scrollTo('book')">Book Now</ul>
+    <ul (click)="scrollTo('contact')">Contact us</ul>
+  </div>
+
+  <!-- Hamburger icon -->
+  <div class="hamburger" (click)="toggleMenu()">
+    <span [class.open]="isMenuOpen"></span>
+    <span [class.open]="isMenuOpen"></span>
+    <span [class.open]="isMenuOpen"></span>
+  </div>
 </nav>

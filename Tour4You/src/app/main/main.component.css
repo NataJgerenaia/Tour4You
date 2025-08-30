@@ -1,13 +1,18 @@
+*{
+    overflow-x: hidden;
+}
+
 .cover-pic {
     width: 100%;
     height: 100vh;
-    position: relative; /* Needed for absolute positioning inside */
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Prevents overflow from pseudo-element */
+    overflow: hidden;
 }
 
+/* Background image with blur */
 .cover-pic::before {
     content: "";
     position: absolute;
@@ -17,58 +22,80 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: blur(3px); /* Apply blur effect only to this pseudo-element */
-    z-index: -1; /* Moves it behind the text */
+    filter: blur(3px);
+    z-index: -1;
 }
+
+/* Dark overlay */
 .cover-pic::after {
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.575); /* Black with 40% transparency */
-    z-index: -1; /* Layer it above the blurred background */
+    background-color: rgba(0, 0, 0, 0.575);
+    z-index: -1;
 }
 
+/* Centered content */
 .cover {
-    width: 900px;
-    height: auto;
+    width: 100%;
+    /* max-width: 1000px; */
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     color: white;
     font-size: 3em;
     font-weight: bold;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.616);
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.616);
     text-align: center;
     z-index: 1;
 }
-span{
+
+.cover span {
     color: rgb(216, 18, 18);
 }
 
-h2{
+/* Subtitle */
+.cover h2 {
     font-size: 0.5em;
     margin-top: 10px;
-}
-.offers-list{
-    width: 900px;
-    display: flex;
-    font-size: 0.5em;
-    margin-top: 10px;
-}
-.offers-list ul{
-    width: 500px;
-}
-.images-section {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    margin-top: 40px;
 }
 
+/* Offers list */
+.offers-list {
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 0.5em;
+    margin-top: 10px;
+    gap: 20px;
+}
+
+.offers-list ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 5px;
+    padding: 0;
+}
+
+/* Images grid */
+.images-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+/* Individual image item */
 .image-item {
+    /* flex: 1 1 150px; */
     width: 200px;
     height: 200px;
     background-size: cover;
@@ -76,29 +103,89 @@ h2{
     border: 5px solid white;
     box-shadow: 0px 5px 10px rgba(196, 195, 195, 0.788);
 }
-
 .borjomi {
-    background-image: url('../../assets/borjomi2.jpg');
+     background-image: url('../../assets/borjomi2.jpg'); }
+  .mtskheta {
+     background-image: url('../../assets/mtskheta.jpg'); 
 }
-
-.mtskheta {
-    background-image: url('../../assets/mtskheta.jpg');
+ .food {
+     background-image: url('../../assets/food.jpg');
 }
-
-.food {
-    background-image: url('../../assets/food.jpg');
-}
-
-.signagi {
+  .signagi { 
     background-image: url('../../assets/signagi.jpg');
 }
-
 .st-nino-monastery {
-    background-image: url('../../assets/st.nino monastry.jpg');
-}
-.old-town{
+     background-image: url('../../assets/st.nino monastry.jpg');
+} 
+.old-town{ 
     background-image: url('../../assets/tbilisi_s-old-town.jpg');
+ }
+
+
+
+
+.kartlimother-left{
+    height: 300px;
+    background-image: url('../../assets/kartlimother-left.png');
+ }
+ .kartlimother-right{
+    height: 300px;
+    background-image: url('../../assets/kartlimother-right.png');
+ }
+ .tbilisi{
+    color: rgb(85, 83, 83);
+    text-shadow: 1px 5px #e6c457;
+ }
+.tour-tbilisi{
+    background-image: url('../../assets/khinkali\ bg.png');
 }
+.tour-tbilisi::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); /* Adjust opacity here */
+    border-radius: 20px;
+}
+.tbilisi-card{
+    background-color:rgb(255, 208, 80) ;
+}
+.tbilisi-card h2{
+    color: rgb(85, 83, 83);
+}
+.tbilisi-det h3{
+    color:rgb(85, 83, 83) ;
+}
+.tbilisi-1{
+    width: 300px;
+    height: 200px;
+    background-image: url('../../assets/oldtbilisii.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 100px;
+ }
+ .tbilisi-2{
+    width: 300px;
+    height: 200px;
+    background-image: url('../../assets/oldtbilisi-3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 100px;
+ }
+ .tbilisi-3{
+    width: 300px;
+    height: 200px;
+    background-image: url('../../assets/oldtbilisi-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 100px;
+ }
+
 .decoration{
     width: 100%;
     height: 160px;
@@ -126,7 +213,7 @@ h2{
     text-shadow: 1px 5px #a0ee6c;
 }
 .title{
-    height: 50px;
+    /* height: 50px; */
     font-size: 3em;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -138,6 +225,7 @@ h2{
     width: 100%;
     height: 700px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
@@ -188,7 +276,7 @@ h2{
 }
 .card p{
     font-size: 1.2em;
-    height: 100px;
+    /* height: 100px; */
 }
 .card h3{
     margin-top: 20px;
@@ -215,7 +303,7 @@ button:hover{
 }
 .details{
     width: 100%;
-    height: 30px;
+    /* height: 30px; */
     display: flex;
     align-items: center;
 }
@@ -398,67 +486,6 @@ button:hover{
     background-position: center;
     border-radius: 100px;
  }
- .kartlimother-left{
-    height: 300px;
-    background-image: url('../../assets/kartlimother-left.png');
- }
- .kartlimother-right{
-    height: 300px;
-    background-image: url('../../assets/kartlimother-right.png');
- }
- .tbilisi{
-    color: rgb(85, 83, 83);
-    text-shadow: 1px 5px #e6c457;
- }
-.tour-tbilisi{
-    background-image: url('../../assets/khinkali\ bg.png');
-}
-.tour-tbilisi::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.5); /* Adjust opacity here */
-    border-radius: 20px;
-}
-.tbilisi-card{
-    background-color:rgb(255, 208, 80) ;
-}
-.tbilisi-card h2{
-    color: rgb(85, 83, 83);
-}
-.tbilisi-det h3{
-    color:rgb(85, 83, 83) ;
-}
-.tbilisi-1{
-    width: 300px;
-    height: 200px;
-    background-image: url('../../assets/oldtbilisii.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 100px;
- }
- .tbilisi-2{
-    width: 300px;
-    height: 200px;
-    background-image: url('../../assets/oldtbilisi-3.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 100px;
- }
- .tbilisi-3{
-    width: 300px;
-    height: 200px;
-    background-image: url('../../assets/oldtbilisi-2.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: 100px;
- }
 .booking-section{
     width: 100%;
     height: auto;
@@ -568,6 +595,7 @@ button:hover{
     font-size: 2em;
     color: rgb(11, 42, 109);
     font-weight: 700;
+    max-width: 550px;
 }
 
 
@@ -655,7 +683,7 @@ input {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .hw-book{
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     font-size: 2.5em;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -757,4 +785,235 @@ a{
     text-decoration: none;
     cursor: pointer;
     font-size: 1.3em;
+}
+/* Responsive adjustments */
+@media screen and (max-width: 1024px) {
+    .cover {
+        font-size: 2em;
+    }
+
+    .offers-list {
+        font-size: 0.45em;
+        gap: 15px;
+    }
+
+    .image-item {
+        width: calc(33.333% - 10px);
+        height: 150px;
+        width: 150px;
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cover {
+        font-size: 1.7em;
+    }
+
+    .offers-list {
+        /* flex-direction: column; */
+        align-items: center;
+        font-size: 0.4em;
+    }
+
+      .image-item {
+        width: calc(50% - 10px);
+        height: 100px;
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .cover {
+        font-size: 2em;
+    }
+
+    .offers-list {
+        font-size: 0.35em;
+    }
+
+    .image-item {
+        max-width: 100px;
+        height: 100px;
+    }
+    .decoration{
+        width: 100%;
+    }
+    .tb-dec{
+       margin-top: -50px;
+
+    }
+    .kartlimother-left, .kartlimother-right{
+        height: 140px;
+        width: 80px;
+        background-size: cover;
+        background-position: center;
+    }
+    .tbilisi{
+        font-size: 1.8em;
+        margin-top: 50px;
+    }
+    .tour-bg{
+        width: 100%;
+    }
+     .tour-box {
+        flex-direction: column; /* Stack content vertically */
+        align-items: center;
+        gap: 20px;
+        height: auto; /* Let it expand naturally */
+    }
+
+    .tour-bg {
+        order:1;
+        width: 100%;
+        height: auto; /* Adjust height for mobile */
+        min-height: 300px; /* Optional minimum height */
+    }
+
+    .card {
+        width: 100%; /* Full width of tour-bg */
+        height: auto;
+        padding: 20px;
+    }
+
+    .imgs-cont {
+        order:2;
+        width: 100%;
+        display: flex;
+        height: 100px;
+        justify-content: center;
+        gap: 15px; /* space between images */
+        flex-wrap: wrap; /* wrap if needed */
+        margin: 0;
+    }
+
+    .imgs-cont div {
+        width: 100px; /* smaller for mobile */
+        height: 100px;
+        display: inline-block;
+        border-radius: 50%; /* circle */
+        background-size: cover;
+        background-position: center;
+    }
+    .tbilisi-card{
+        width: 90%;
+        height: auto;
+        border-radius: 30px;
+    }
+    .tbilisi-card h2{
+        font-size: 1.6em;
+        height: auto;
+        text-align: center;
+    }
+    .tbilisi-card p{
+        font-size: 1em;
+        margin-top: 10px;
+        height: auto;
+    }
+    .details{
+        height:auto;
+        margin-bottom: 10px;
+    }
+    .grape-left, .grape-right{
+        width: 80px;
+        height: 90px;
+        background-size: cover;
+        background-position: center;
+    }
+    .title{
+        font-size: 1.4em;
+    }
+    .tour-bg{
+        width: 100%;
+    }
+    .card{
+        width: 90%;
+        border-radius: 30px;
+    }
+    .card h2{
+        font-size: 1.6em;
+        height: auto;
+        text-align: center;
+    }
+    .card p{
+        font-size: 1em;
+        margin-top: 10px;
+        height: auto;
+    }
+    .deer-left, .deer-right{
+        width: 100px;
+        height: 90px;
+        background-size: cover;
+        background-position: center;
+    }
+    .skii-left, .skii-right {
+        width: 100px;
+        height: 90px;
+        background-size: cover;
+        background-position: center;
+    }
+    .hw-book{
+        font-size: 2em;
+        background-color: black;
+        color: white;
+        padding: 10px;
+    }
+    .img-text-icon{
+        flex-direction: column;
+    }
+    .next-icon{
+        transform: rotate(90deg);
+        margin-top:20px;
+        margin-bottom: 20px;
+    }
+    .booking-section{
+        flex-direction: column;
+    }
+    .booking-img{
+        width: 90%;
+        max-height: 800px ;
+    }
+    footer{
+        width: 100%;
+        height: 200px;
+    }
+   .over-footer{
+    font-size: 0.7em;
+   }
+   .over-footer p, a{
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+    text-shadow:1px 2px #ffffff;
+   }
+   .socials{
+    height: auto;
+   }
+   .socials svg{
+    width: 20px;
+    height: 20px;
+   }
+   .over-footer h2{
+    display: none;
+   }
+   .checkark{
+   color:red;
+   }
+   .offers-list{
+     display: grid;
+     grid-template-columns: repeat(2, 1fr); 
+     gap: 20px; /* spacing between them */
+     text-align: right;
+   }
+   ul{
+    font-size: 1.7em;
+  display: flex;
+  align-items: center;   /* vertically center content */
+  justify-content: center;
+   }
+   .modal-text{
+    font-size: 1.3em;
+   }
+   .logo{
+    width: 50px;
+   }
 }

@@ -21,7 +21,7 @@
 
     </div>
 </div>
-<div class="decoration">
+<div id="tours" class="decoration tb-dec">
     <div class="left kartlimother-left"></div>
     <h1 class="tbilisi title">Tour in Tbilisi</h1>
     <div class="right kartlimother-right"></div>
@@ -123,7 +123,7 @@
     </div>
 </div>
 
-<div class="booking-imgs">
+<div id="how-to-book" class="booking-imgs">
     <h2 class="hw-book">HOW TO BOOK A TOUR?</h2>
     <div class="img-text-icon">
         <div class="img-text">
@@ -146,14 +146,14 @@
     </div>
 </div>
 
-<div class="booking-section">
+<div id="book" class="booking-section">
     <div class="booking-img"></div>
     <button class="btn-3" (click)="openModal()">Book Now</button>
     <div *ngIf="isModalOpen" class="modal-overlay">
         <div class="modal-content">
             <div class="logo"></div>
           <button class="close-btn" (click)="closeModal()">X</button>
-          <p class="modal-text">Leave a request and receive <br> a detailed program for each trip!</p>
+          <p class="modal-text">Leave a request and receive a detailed program for each trip!</p>
           <h4>Our specialist will consult you </h4>
          <form action="submit">
             <input type="name" placeholder="Name">
@@ -161,12 +161,12 @@
             <button type="submit" class="submit-btn">Find out details of the trip </button>
          </form>
 
-          <p class="policy-text">By submitting an application, you agree to <br> the personal data processing policy.</p>
+          <p class="policy-text">By submitting an application, you agree to the personal data processing policy.</p>
         </div>
       </div>
 </div>
 
-<footer>
+<footer id="contact">
     <div class="over-footer">
         <h2>Contact us</h2>
         <div class="socials">

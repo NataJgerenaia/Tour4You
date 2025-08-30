@@ -12,20 +12,19 @@ import intlTelInput from 'intl-tel-input';
 })
 export class MainComponent implements AfterViewInit, OnDestroy {
   isModalOpen: boolean = false;
-  itiInstance: any; // Store intl-tel-input instance
+  itiInstance: any; 
 
   openModal(): void {
     this.isModalOpen = true;
-    setTimeout(() => this.initializeIntlTelInput(), 300); // Wait for input to render
+    setTimeout(() => this.initializeIntlTelInput(), 300); 
   }
 
   closeModal(): void {
     this.isModalOpen = false;
-    this.destroyIntlTelInput(); // Destroy instance on modal close
+    this.destroyIntlTelInput(); 
   }
 
   ngAfterViewInit(): void {
-    // Ensure the input exists before initializing
     this.initializeIntlTelInput();
   }
 
@@ -42,7 +41,7 @@ export class MainComponent implements AfterViewInit, OnDestroy {
 
   destroyIntlTelInput(): void {
     if (this.itiInstance) {
-      this.itiInstance.destroy(); // Remove instance
+      this.itiInstance.destroy(); 
       this.itiInstance = null;
     }
   }
