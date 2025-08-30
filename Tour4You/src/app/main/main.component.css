@@ -123,13 +123,26 @@
 
 
 
-
+.tb-dec{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -50px;
+}
 .kartlimother-left{
-    height: 300px;
+    width: 140px;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     background-image: url('../../assets/kartlimother-left.png');
  }
  .kartlimother-right{
-    height: 300px;
+    width: 140px;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     background-image: url('../../assets/kartlimother-right.png');
  }
  .tbilisi{
@@ -188,23 +201,22 @@
 
 .decoration{
     width: 100%;
-    height: 160px;
+    height: 200px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 }
-.left{
+
+.right{
     width: 160px;
     height: 160px;
     background-repeat: no-repeat;
 }
-.right{
-    width: 130px;
+.grape-left{
+    width: 160px;
     height: 160px;
     background-repeat: no-repeat;
-}
-.grape-left{
     background-image: url('../../assets/grapedecor-left.png');
 
 }
@@ -219,7 +231,7 @@
 }
 .grape-right{
     background-image: url('../../assets/grapedecor-right.png');
-
+margin-right: -30px;
 }
 .tour-box{
     width: 100%;
@@ -282,7 +294,7 @@
     margin-top: 20px;
     font-weight: 900;
     color: rgb(119, 47, 119);
-    margin-right: 40px;
+    /* margin-right: 40px; */
 }
 button{
     /* border: 2px solid rgb(189, 112, 189); */
@@ -303,9 +315,10 @@ button:hover{
 }
 .details{
     width: 100%;
-    /* height: 30px; */
+    height: auto;
     display: flex;
     align-items: center;
+    gap: 15px;
 }
 .imgs-cont{
     width: 25%;
@@ -350,6 +363,9 @@ button:hover{
 }
 
 .deer-left{
+    width: 160px;
+    height: 160px;
+    background-repeat: no-repeat;
     background-image: url('../../assets/deer-left.png');
 }
 .deer-right{
@@ -407,6 +423,9 @@ button:hover{
     border-radius: 100px;
 }
 .skii-left{
+    width: 160px;
+    height: 160px;
+    background-repeat: no-repeat;
     background-image: url('../../assets/skii-left.png');
 }
 .skii-right{
@@ -913,6 +932,7 @@ a{
     .details{
         height:auto;
         margin-bottom: 10px;
+        font-size: 0.9em;
     }
     .grape-left, .grape-right{
         width: 80px;
